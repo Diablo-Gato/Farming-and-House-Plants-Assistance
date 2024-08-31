@@ -25,6 +25,7 @@ def get_data():
 
 
 
-chat = model.start_chat(history=get_data())
-response = chat.send_message("what is the reason for mango fruit having dark splot")
-print(response.text)
+def chat_bot(message):
+    chat = model.start_chat(history=get_data())
+    response = chat.send_message(message)
+    return response.text
